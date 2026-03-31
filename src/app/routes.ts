@@ -11,6 +11,8 @@ import { PlansPage } from "./pages/PlansPage";
 import MobileCommentsFeedPage from "./pages/MobileCommentsFeedPage";
 import MentionDetailPage from "./pages/MentionDetailPage";
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -34,4 +36,4 @@ export const router = createBrowserRouter([
     path: "/mobile-feed/:mentionId",
     Component: MentionDetailPage,
   },
-]);
+], { basename });
